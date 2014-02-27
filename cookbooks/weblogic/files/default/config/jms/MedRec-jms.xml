@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<weblogic-jms xmlns="http://xmlns.oracle.com/weblogic/weblogic-jms" xmlns:sec="http://xmlns.oracle.com/weblogic/security" xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-jms http://xmlns.oracle.com/weblogic/weblogic-jms/1.1/weblogic-jms.xsd">
+  <queue name="com.bea.medrec.jms.RecordToCreateQueue">
+    <jndi-name>com.bea.medrec.jms.RecordToCreateQueue</jndi-name>
+  </queue>
+  <queue name="com.bea.medrec.jms.PatientNotificationQueue">
+    <jndi-name>com.bea.medrec.jms.PatientNotificationQueue</jndi-name>
+  </queue>
+  <queue name="weblogic.wsee.DefaultQueue">
+    <jndi-name>weblogic.wsee.DefaultQueue</jndi-name>
+  </queue>
+</weblogic-jms>

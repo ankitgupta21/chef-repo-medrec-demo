@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<weblogic-jms xmlns="http://xmlns.oracle.com/weblogic/weblogic-jms" xmlns:sec="http://xmlns.oracle.com/weblogic/security" xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-jms http://xmlns.oracle.com/weblogic/weblogic-jms/1.1/weblogic-jms.xsd">
+  <uniform-distributed-queue name="com.bea.medrec.jms.PatientNotificationQueue">
+    <sub-deployment-name>MedRecClusterSub</sub-deployment-name>
+    <default-targeting-enabled>false</default-targeting-enabled>
+    <jndi-name>com.bea.medrec.jms.PatientNotificationQueue</jndi-name>
+    <load-balancing-policy>Round-Robin</load-balancing-policy>
+    <forward-delay>-1</forward-delay>
+    <reset-delivery-count-on-forward>true</reset-delivery-count-on-forward>
+  </uniform-distributed-queue>
+  <uniform-distributed-queue name="com.bea.medrec.jms.RecordToCreateQueue">
+    <sub-deployment-name>MedRecClusterSub</sub-deployment-name>
+    <jndi-name>com.bea.medrec.jms.RecordToCreateQueue</jndi-name>
+  </uniform-distributed-queue>
+  <uniform-distributed-queue name="weblogic.wsee.DefaultQueue">
+    <sub-deployment-name>MedRecClusterSub</sub-deployment-name>
+    <jndi-name>weblogic.wsee.DefaultQueue</jndi-name>
+  </uniform-distributed-queue>
+</weblogic-jms>

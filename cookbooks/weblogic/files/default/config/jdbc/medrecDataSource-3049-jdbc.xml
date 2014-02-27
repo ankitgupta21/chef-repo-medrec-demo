@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jdbc-data-source xmlns="http://xmlns.oracle.com/weblogic/jdbc-data-source" xmlns:sec="http://xmlns.oracle.com/weblogic/security" xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/jdbc-data-source http://xmlns.oracle.com/weblogic/jdbc-data-source/1.0/jdbc-data-source.xsd">
+  <name>medrecDataSource</name>
+  <jdbc-driver-params>
+    <url>jdbc:oracle:thin:@12.173.168.211:1521:MEDREC1</url>
+    <driver-name>oracle.jdbc.xa.client.OracleXADataSource</driver-name>
+    <properties>
+      <property>
+        <name>user</name>
+        <value>medrec</value>
+      </property>
+    </properties>
+    <password-encrypted>{AES}dP0L6Lt3JuS7y3LVr8MoUhsaU5ClETtDpHPon4hAU00=</password-encrypted>
+  </jdbc-driver-params>
+  <jdbc-connection-pool-params>
+    <initial-capacity>2</initial-capacity>
+    <max-capacity>15</max-capacity>
+    <capacity-increment>1</capacity-increment>
+    <test-table-name>SQL SELECT 1 FROM DUAL</test-table-name>
+    <statement-cache-size>10</statement-cache-size>
+    <statement-cache-type>LRU</statement-cache-type>
+  </jdbc-connection-pool-params>
+  <jdbc-data-source-params>
+    <jndi-name>jdbc/MedRecGlobalDataSourceXA</jndi-name>
+    <row-prefetch>false</row-prefetch>
+    <stream-chunk-size>256</stream-chunk-size>
+    <global-transactions-protocol>TwoPhaseCommit</global-transactions-protocol>
+  </jdbc-data-source-params>
+  <jdbc-oracle-params>
+    <oracle-enable-java-net-fast-path>true</oracle-enable-java-net-fast-path>
+    <oracle-optimize-utf8-conversion>true</oracle-optimize-utf8-conversion>
+  </jdbc-oracle-params>
+</jdbc-data-source>
